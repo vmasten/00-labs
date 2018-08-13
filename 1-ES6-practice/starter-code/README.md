@@ -22,10 +22,12 @@ Follow these instructions carefully and in order.
 
 ##### Investigate how `let` and `const` are now used in the code. Where did you need to convert `const` into `let` to make the code work? Can you identify any patterns/similarities?
 
-(Put your answer here)
+allProducts needs to be a let, I thiiiiink because it gets stringified, but to be honest, I'm not totally sure. totalClicks also needs to be a let, because it's assigned new values throughout the code. Aside from those two variables, all of the loops require let rather than const by definition of a loop. If you can't increment your loop counter, you can't loop!
+
+Basically, if you're going to assign something new to a variable, it needs to be a let. If it's an object or a DOM element, const is fine, because (at most) you're only adding to what's already been defined. Or, at least, that's how I think it works.
 
 ---
 
 ##### How did it go with making the adaptation from concatenations to template literal notation? Do you think you'll mostly use template literal notation from now on?
 
-(Put your answer here)
+It looked weird when I read about it, but I picked it up pretty quickly. It's definitely easier to see exactly what you're doing with the template literal notation, and I like that spaces are preserved as you'd expect them to be, rather than requiring you to remember the space before/after the ' depending on how you want things formatted. I'll definitely try to use it from now on, though in a pinch, my brain may still choose concatenation by default at times.
